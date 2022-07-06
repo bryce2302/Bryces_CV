@@ -16,6 +16,10 @@ p {
     color: rgb(92, 92, 92);
 }
 
+h4{
+    display:inline-block;
+}
+
 a,
 a:hover,
 a:focus {
