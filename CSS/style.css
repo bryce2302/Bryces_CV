@@ -61,6 +61,8 @@ a:focus {
 
 #sidebar.active {
     margin-left: -250px;
+    color: #ff0000;
+    background: #ff0000;
 }
 
 #sidebar .sidebar-header {
