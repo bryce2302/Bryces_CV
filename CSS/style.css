@@ -124,6 +124,8 @@ ul.CTAs a {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
+    /* background-image: url("../Images/me.jpeg");
+    background-repeat: no-repeat;*/
 }
 
 #content button{
@@ -195,3 +197,5 @@ img {
         background: #643f07;
         color: white;
     }
+
+   
