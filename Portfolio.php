@@ -1,3 +1,20 @@
+<?php
+
+
+if($_POST["message"]) {
+
+
+mail("bryce_dawson@outlook.com", "Here is the subject line",
+
+
+$_POST["insert your message here"]. "From: an@email.address");
+
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -93,6 +110,22 @@
 
                                             <a href="PDF/CNN_Pneumonia.pdf" download="CNN-Pneumonia">Download the pdf here!</a>
                     </div>
+
+                    <div class="polaroid">
+                        <li class="list-group-item"> <h4>Email Me</h4>
+                            <p> </p>
+                            <form method="post" action="subscriberform.php">
+
+
+                                <textarea name="message"></textarea>
+                                
+                                
+                                <input type="submit">
+                                
+                                
+                                </form>
+                            
+        </div>
 
                     <li class="list-group-item"></li>
                 </ul>
