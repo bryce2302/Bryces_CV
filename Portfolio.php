@@ -49,7 +49,7 @@ $_POST["insert your message here"]. "From: an@email.address");
                     <a href="About.html">About</a>
                 </li>
                 <li>
-                    <a href="Portfolio.html">Portfolio</a>
+                    <a href="Portfolio.php">Portfolio</a>
                 </li>
                 <li>
                     <a href="Contact.html">Contact</a>
