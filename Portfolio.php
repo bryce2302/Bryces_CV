@@ -114,7 +114,7 @@ $_POST["insert your message here"]. "From: an@email.address");
                     <div class="polaroid">
                         <li class="list-group-item"> <h4>Email Me</h4>
                             <p> </p>
-                            <form method="post" action="subscriberform.php">
+                            <form method="post" action="Portfolio.php">
 
 
                                 <textarea name="message"></textarea>
