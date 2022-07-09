@@ -198,4 +198,78 @@ img {
         color: white;
     }
 
+
+
+    .slider {
+        width: 700px;
+        height: 500px;
+        background-color: yellow;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        text-align: center;
+        overflow: hidden;
+      }
+      .image-container {
+        width: 1500px;
+        background-color: pink;
+        height: 300px;
+        clear: both;
+        position: relative;
+        -webkit-transition: left 4s;
+        -moz-transition: left 4s;
+        -o-transition: left 4s;
+        transition: left 4s;
+      }
+
+
+/* Styling the area of the slides */
+#slideshow {
+    overflow: hidden;
+    height: 700px;
+    width: 1000px;
+    margin: 0 auto;
+  }
    
+  /* Style each of the sides
+  with a fixed width and height */
+  .slide {
+    float: left;
+    height: 700px;
+    width: 1000px;
+  }
+   
+  /* Add animation to the slides */
+  .slide-wrapper {
+     
+  /* Calculate the total width on the
+    basis of number of slides */
+    width: calc(1000px * 4);
+   
+  /* Specify the animation with the
+    duration and speed */
+    animation: slide 40s ease infinite;
+  }
+ 
+  /* Define the animation
+  for the slideshow */
+  @keyframes slide {
+     
+  /* Calculate the margin-left for
+    each of the slides */
+    20% {
+      margin-left: 0px;
+    }
+   
+    40% {
+      margin-left: calc(-1000px * 1);
+    }
+   
+    60% {
+      margin-left: calc(-1000px * 2);
+    }
+   
+    80% {
+      margin-left: calc(-1000px * 3);
+    }
+  }
