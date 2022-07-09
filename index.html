@@ -61,39 +61,82 @@
             
             <div class="line"></div>
 
-                      <!-- Define the slideshow container -->
-    <div id="slideshow">
-        <div class="slide-wrapper">
-             
-        <!-- Define each of the slides
-         and write the content -->
-          
-            <div class="slide">
-                <h1 class="slide-number">
-                    <img src="Images/me_1.jpg">
-                </h1>
-            </div>
-            <div class="slide">
-                <h1 class="slide-number">
-                    <img src="Images/me_2.jpg">
-                </h1>
-            </div>
-            <div class="slide">
-                <h1 class="slide-number">
-                    <img src="Images/me_5.jpg">
-                </h1>
-            </div>
-            <div class="slide">
-                <h1 class="slide-number">
-                    <img src="Images/me_6.jpg">
-                </h1>
-            </div>
-        </div>
-    </div>
+            <div id="slider">
+                <ul id="slideWrap"> 
+                  <li><img src="Images/me_1.jpg" alt=""></li>
+                  <li><img src="Images/me_2.jpg" alt=""></li>
+                  <li><img src="Images/me_3.jpg" alt=""></li>
+                  <li><img src="Images/me_4.jpg" alt=""></li>
+                </ul>
+                <a id="prev" href="#">&#8810;</a>
+                <a id="next" href="#">&#8811;</a>
+              </div>
 
 
         </div>
     </div>
+    
+
+
+    <script>
+        var responsiveSlider = function() {
+    
+    var slider = document.getElementById("slider");
+    var sliderWidth = slider.offsetWidth;
+    var slideList = document.getElementById("slideWrap");
+    var count = 1;
+    var items = slideList.querySelectorAll("li").length;
+    var prev = document.getElementById("prev");
+    var next = document.getElementById("next");
+    
+    window.addEventListener('resize', function() {
+      sliderWidth = slider.offsetWidth;
+    });
+    
+    var prevSlide = function() {
+      if(count > 1) {
+        count = count - 2;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = 1) {
+        count = items - 1;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+    };
+    
+    var nextSlide = function() {
+      if(count < items) {
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = items) {
+        slideList.style.left = "0px";
+        count = 1;
+      }
+    };
+    
+    next.addEventListener("click", function() {
+      nextSlide();
+    });
+    
+    prev.addEventListener("click", function() {
+      prevSlide();
+    });
+    
+    setInterval(function() {
+      nextSlide()
+    }, 5000);
+    
+    };
+    
+    window.onload = function() {
+    responsiveSlider();  
+    }
+              </script>
+
+ 
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

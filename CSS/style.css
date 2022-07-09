@@ -223,53 +223,59 @@ img {
       }
 
 
-/* Styling the area of the slides */
-#slideshow {
-    overflow: hidden;
-    height: 700px;
-    width: 1000px;
-    margin: 0 auto;
-  }
-   
-  /* Style each of the sides
-  with a fixed width and height */
-  .slide {
-    float: left;
-    height: 700px;
-    width: 1000px;
-  }
-   
-  /* Add animation to the slides */
-  .slide-wrapper {
-     
-  /* Calculate the total width on the
-    basis of number of slides */
-    width: calc(1000px * 4);
-   
-  /* Specify the animation with the
-    duration and speed */
-    animation: slide 40s ease infinite;
-  }
- 
-  /* Define the animation
-  for the slideshow */
-  @keyframes slide {
-     
-  /* Calculate the margin-left for
-    each of the slides */
-    20% {
-      margin-left: 0px;
-    }
-   
-    40% {
-      margin-left: calc(-1000px * 1);
-    }
-   
-    60% {
-      margin-left: calc(-1000px * 2);
-    }
-   
-    80% {
-      margin-left: calc(-1000px * 3);
-    }
-  }
+
+
+
+      #slider {
+        position: relative;
+        width: 550px;
+        height: 375px;
+        overflow: hidden;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        margin:0 auto;
+      }
+      #slider ul {
+        position: relative;
+        list-style: none;
+        height: 100%;
+        width: 10000%;
+        padding: 0;
+        margin: 0;
+        transition: all 750ms ease;
+        left: 0;
+      }
+      #slider ul li {
+        position: relative;
+        height: 100%;
+       
+        float: left;
+      }
+      #slider ul li img{
+        width: 550px;
+        height: 375px;
+      }
+       
+      #slider #prev, #slider #next {
+        width: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 2rem;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 150ms ease;
+      }
+      #slider #prev:hover, #slider #next:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        text-shadow: 0;
+      }
+      #slider #prev {
+        left: 10px;
+      }
+      #slider #next {
+        right: 10px;
+      }
